@@ -50,7 +50,14 @@ Este projeto consiste em um gerador de listas de verificação (checklists) para
     │   │   └── speech2text.py
     │   ├── prompt_result.txt
     │   └── ...
-    ├── app.py
+    ├── frontend/
+    │   ├── checklist/
+    │   │   ├── generate_checklist.py
+    │   │   └── speech2text.py
+    │   ├── app.py
+    │   ├── maintenance_service.py
+    │   ├── utils.py
+    │   └── ...
     ├── requirements.txt
     └── .env
     ```
