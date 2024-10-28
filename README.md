@@ -36,19 +36,22 @@ Este projeto consiste em um gerador de listas de verificação (checklists) para
     streamlit run app.py
     ```
 2. Interface de Usuário:
+    - Navegue até a interface de usuário que se abrirá em seu navegador.
     - Faça o upload de um arquivo de áudio (formatos suportados: OGG, MP3, WAV) ou insira um texto corrido na interface.
     - Clique no botão "Gerar Checklist do Áudio" ou "Gerar Checklist do Texto" para processar a entrada.
     - O resultado será exibido na área designada e também salvo em backend/prompt_result.txt.
 ## Estrutura do projeto
-seu_repositorio/
-│
-├── backend/
-│   ├── checklist/
-│   │   ├── generate_checklist.py
-│   │   └── speech2text.py
-│   ├── prompt_result.txt
-│   └── ...
-├── app.py
-├── requirements.txt
-└── .env
+    ```bash
+    seu_repositorio/
+    │
+    ├── backend/
+    │   ├── checklist/
+    │   │   ├── generate_checklist.py
+    │   │   └── speech2text.py
+    │   ├── prompt_result.txt
+    │   └── ...
+    ├── app.py
+    ├── requirements.txt
+    └── .env
+    ```
 
