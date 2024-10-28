@@ -8,7 +8,7 @@ load_dotenv()
 # Defina sua chave da API do OpenAI
 url = "https://api.openai.com/v1/audio/transcriptions"
 
-def audio_para_texto(arquivo_audio):
+def speech_to_text(arquivo_audio):
     try:
         # Configure o cabeçalho e os dados para a requisição
         headers = {
@@ -31,7 +31,7 @@ def audio_para_texto(arquivo_audio):
 
 # Exemplo de uso
 arquivo_audio = "./data/audio/audio_wpp.ogg"
-texto_convertido = audio_para_texto(arquivo_audio)
+texto_convertido = speech_to_text(arquivo_audio)
 if texto_convertido:
     print("Texto transcrito:", texto_convertido)
 
