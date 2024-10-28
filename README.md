@@ -1,20 +1,21 @@
 # Gerador de Checklist para Manutenção Industrial Magic Square
 
-Este projeto consiste em um gerador de listas de verificação (checklists) para técnicos de manutenção industrial. O programa oferece a funcionalidade de converter áudio em texto e gerar checklists baseados tanto em entradas de áudio quanto em texto corrido. Utiliza a API da OpenAI para gerar as listas de verificação e o reconhecimento de fala para transcrever áudios.
+Este projeto consiste em um gerador de listas de verificação (checklists) para auxiliar técnicos de manutenção industrial. 
+O programa oferece a funcionalidade de converter áudio em texto usando inteligencia artificial e gera checklists baseados tanto em entradas de áudio quanto em texto corrido. Utiliza a API da OpenAI para gerar as listas de verificação e o reconhecimento de fala para transcrever áudios.
 
 ## Funcionalidades
 
-- **Conversão de Áudio para Texto**: Utiliza a função `speech_to_text` para transcrever áudios de manutenção em texto.
+- **Conversão de Áudio para Texto**: Utiliza a ferramenta whisper da OpenAI na função `speech_to_text` para transcrever áudios de manutenção em texto.
 - **Geração de Checklist**: A função `generate_checklist` cria listas de verificação a partir de texto transcrito ou texto corrido.
 - **Interface Gráfica com Streamlit**: Permite ao usuário fazer upload de arquivos de áudio ou inserir texto diretamente para gerar checklists.
-- **Exportação de Resultados**: Os resultados gerados são salvos em um arquivo de texto.
+- **Exibicao de Resultados**: Mostra os resultados numa interface interativa de facil acesso que ajuda o tecnico a se organizar quanto as tarefas e as ferramentas.
 
 ## Tecnologias Utilizadas
 
-- Python
+- Python e dotenv (para gerenciamento de variáveis de ambiente)
 - OpenAI API
 - Streamlit
-- dotenv (para gerenciamento de variáveis de ambiente)
+- Feiss
 
 ## Instalação
 
@@ -38,10 +39,9 @@ Este projeto consiste em um gerador de listas de verificação (checklists) para
 2. Interface de Usuário:
     - Navegue até a interface de usuário que se abrirá em seu navegador.
     - Faça o upload de um arquivo de áudio (formatos suportados: OGG, MP3, WAV) ou insira um texto corrido na interface.
-    - Clique no botão "Gerar Checklist do Áudio" ou "Gerar Checklist do Texto" para processar a entrada.
+    - Clique no botão "Enviar Áudio" ou "Enviar Texto" para processar a entrada.
     - O resultado será exibido na área designada e também salvo em backend/prompt_result.txt.
 ## Estrutura do projeto
-    ```bash
     seu_repositorio/
     │
     ├── backend/
@@ -57,5 +57,4 @@ Este projeto consiste em um gerador de listas de verificação (checklists) para
     │   └── ...
     ├── requirements.txt
     └── .env
-    ```
 
