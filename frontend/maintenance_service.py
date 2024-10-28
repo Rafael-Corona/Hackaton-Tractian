@@ -43,7 +43,7 @@ def show_maintenance_service_panel(rag):
         with col2:
             if st.button("Visualizar todos os Manuais"):
                 #chamar outra função aqui
-                mostra_manual(rag.query("What is the best option to maintain energy supply?"))
+                mostra_manual(rag.query("Como fazer a troca de oleo dessa maquina?"))
 
         # Carregar tarefas do arquivo
         tasks_file_path = "data/tarefas/tasks.txt"
@@ -70,4 +70,5 @@ def show_maintenance_service_panel(rag):
                     show_detail(f"data/ferramentas/ferramentas_{task}.txt")
             with col2:
                 if st.button(f"Visualizar Manual - {task}", key=f"manual_button_{task}"):
-                    show_detail(f"data/manuais/manual_{task}.txt")
+                    mostra_manual(rag.query("Qual a melhor forma de verificar a vibracão do motor?"))
+

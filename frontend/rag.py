@@ -1,5 +1,6 @@
 from typing import List
 from pypdf import PdfReader
+from translate import Translator
 
 import faiss
 from langchain.schema.document import Document
@@ -10,7 +11,7 @@ from langchain.chat_models import ChatOpenAI
 from langchain.chains import ConversationalRetrievalChain
 from langchain.memory import ConversationBufferMemory
 from langchain_community.docstore.in_memory import InMemoryDocstore
-
+import streamlit as st
 import warnings
 warnings.filterwarnings("ignore", category=DeprecationWarning) 
 
@@ -25,6 +26,7 @@ class RAG:
     def __init__(self):
         self.embeddings = OpenAIEmbeddings()
         index = faiss.IndexFlatL2(len(self.embeddings.embed_query("hello world")))
+        
         self.vector_store = FAISS(
             embedding_function=self.embeddings,
             index=index,
@@ -63,10 +65,19 @@ class RAG:
     
     def query(self, q:str) -> str:
         # todo: traduzir do portugues <=> ingles
+        q = self._translate(content=q, from_lang='pt-br', to_lang='en')
+        print(q)
         result = self.conversation_chain({"question": q})
         answer = result["answer"]
+        print(answer)
+        answer = self._translate(content=answer, from_lang='en', to_lang='pt-br')
         return answer
     
+    def _translate(self, content, from_lang, to_lang) -> str:
+        translator= Translator(from_lang=from_lang, to_lang=to_lang)
+        return translator.translate(content)
+    
+
 if __name__ == '__main__':
     from dotenv import load_dotenv
     import os
@@ -74,12 +85,12 @@ if __name__ == '__main__':
     
     rag = RAG()
     docs = []
-    target_folder = 'data/documents/technical-catalog'
+    target_folder = '../data/documents/technical-catalog'
     for file in os.listdir(target_folder):
         docs.append(f'{target_folder}/{file}')
         
     rag.add_documents(docs)
-    print(rag.query('What is the best option to maintain energy supply?'))
+    print(rag.query('Qual a melhor opcao para manter uma fonte de energia?'))
     
 
 

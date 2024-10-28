@@ -1,6 +1,9 @@
 import streamlit as st
 from rag import RAG
 from maintenance_service import show_maintenance_service_panel
+import os
+from dotenv import load_dotenv
+load_dotenv()
 
 # Configuração da página
 st.set_page_config(page_title="Dashboard de Ordem de Serviço de Manutenção", page_icon="🛠️", layout="wide")
@@ -23,7 +26,7 @@ if st.sidebar.button("Inserir Tarefas"):
 
 rag = RAG()
 docs = []
-target_folder = 'data/documents/technical-catalog'
+target_folder = '../data/documents/technical-catalog'
 for file in os.listdir(target_folder):
     docs.append(f'{target_folder}/{file}')
 rag.add_documents(docs)
