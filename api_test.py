@@ -1,3 +1,4 @@
+import os
 import requests
 
 from dotenv import load_dotenv
@@ -11,7 +12,7 @@ def audio_para_texto(arquivo_audio):
     try:
         # Configure o cabeçalho e os dados para a requisição
         headers = {
-            "Authorization": f"Bearer {api_key}"
+            "Authorization": f"Bearer {os.getenv('API_KEY')}"
         }
         files = {
             "file": (arquivo_audio, open(arquivo_audio, "rb")),
@@ -29,7 +30,7 @@ def audio_para_texto(arquivo_audio):
         return None
 
 # Exemplo de uso
-arquivo_audio = "audio_tractian.ogg"
+arquivo_audio = "./data/audio/audio_wpp.ogg"
 texto_convertido = audio_para_texto(arquivo_audio)
 if texto_convertido:
     print("Texto transcrito:", texto_convertido)
