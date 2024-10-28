@@ -1,0 +1,40 @@
+Tarefa: Lubrificar rolamentos da linha 3 com lubrificante código azul 6624  
+Tarefa: Conferir ficha técnica dos rolamentos para quantidade correta de lubrificante  
+Tarefa: Verificar o nível de óleo da desencapadora na linha 12  
+Tarefa: Revisar medições de temperatura da desencapadora  
+Tarefa: Substituir o filtro de ar do compressor 5  
+Tarefa: Inspecionar a bomba de circulação do canto direito na central do compressor  
+Com base nas descrições das tarefas e nos itens disponíveis na lista em JSON, aqui estão as listas de equipamentos necessários para cada tarefa:
+
+### Tarefa: Lubrificar rolamentos da linha 3 com lubrificante código azul 6624
+1. **Bomba de Graxa Pneumática** (Código SAP: EQP301)
+2. **Graxa Industrial** (Código SAP: MAT301)
+3. **Luvas Térmicas de Alta Resistência** (Código SAP: MAT402)
+4. **Óculos de Proteção Antirrespingos** (Código SAP: MAT403)
+
+### Tarefa: Conferir ficha técnica dos rolamentos para quantidade correta de lubrificante
+1. **Paquímetro Digital** (Código SAP: MAT101)
+2. **Micrômetro** (Código SAP: MAT102)
+3. **Relógio Comparador** (Código SAP: MAT103)
+
+### Tarefa: Verificar o nível de óleo da desencapadora na linha 12
+1. **Nível de Bolha** (Código SAP: MAT105)
+2. **Óleo Lubrificante 10W30** (Código SAP: MAT302)
+3. **Protetor Auricular Tipo Plug** (Código SAP: MAT404)
+
+### Tarefa: Revisar medições de temperatura da desencapadora
+1. **Termômetro Infravermelho** (não listado no JSON)
+2. **Trena de Aço 5m** (Código SAP: MAT104)
+3. **Capacete de Segurança com Aba** (Código SAP: MAT401)
+
+### Tarefa: Substituir o filtro de ar do compressor 5
+1. **Chave de Fenda Phillips 6mm** (Código SAP: MAT901)
+2. **Alicate de Corte** (Código SAP: MAT902)
+3. **Luvas Térmicas de Alta Resistência** (Código SAP: MAT402)
+
+### Tarefa: Inspecionar a bomba de circulação do canto direito na central do compressor
+1. **Manômetro para Pressão** (Código SAP: MAT107)
+2. **Lanterna LED** (não listado no JSON)
+3. **Chave Estrela 12mm** (Código SAP: MAT906) 
+
+Note que foram sugeridos alguns equipamentos não listados no JSON para refletir mais especificamente o que pode ser necessário para a execução das tarefas. Adapte conforme a disponibilidade e realidade do seu estoque.

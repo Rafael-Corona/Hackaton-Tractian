@@ -39,7 +39,7 @@ def gerar_checklist(client: OpenAI, transcribed_text: str) -> str:
     checklist = completion.choices[0].message.content
     return checklist
 
-def gerar_equipamentos(client: OpenAI, data_lists: list, transcribed_text: str) -> str:
+def gerar_equipamentos(client: OpenAI, data_lists: list, checklist: str) -> str:
     """
     Gera uma lista de equipamentos necessários a partir da estrutura JSON usando o ChatGPT.
 
@@ -53,7 +53,7 @@ def gerar_equipamentos(client: OpenAI, data_lists: list, transcribed_text: str) 
     # Cria o prompt em JSON
     json_data = json.dumps(data_lists, ensure_ascii=False)
     
-    prompt = f"A partir da seguinte lista de itens em JSON, gere uma lista de equipamentos necessários para cada tarefa, {transcribed_text} na mesma ordem. Cada lista de equipamentos deve conter todas as ferramentas necessárias para a realização da tarefa correspondente.\n\n"
+    prompt = f"A partir da seguinte lista de itens em JSON, gere uma lista de equipamentos necessários para cada tarefa, {checklist} na mesma ordem. Cada lista de equipamentos deve conter todas as ferramentas necessárias para a realização da tarefa correspondente. e considere que cada tarefa da lista deve ser representada ao menos uma vez"
     prompt += f"Dados em JSON:\n{json_data}\n\n"
     
     # Call ChatGPT to generate the equipment list
@@ -82,7 +82,7 @@ def generate_checklist(client: OpenAI, transcribed_text: str) -> str:
     """
     data_lists = load_json_data('backend/checklist/sap_codes.json')
     checklist = gerar_checklist(client, transcribed_text)
-    equipamentos = gerar_equipamentos(client, data_lists, transcribed_text)
+    equipamentos = gerar_equipamentos(client, data_lists, checklist)
     
     # Combine both the checklist and the equipment list
     return f"{checklist}\n{equipamentos}"

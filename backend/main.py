@@ -8,5 +8,6 @@ client = OpenAI()
 audio = 'data/audio/audio_wpp.ogg'
 
 t = speech_to_text(client, audio)
-c = generate_checklist(client, t)
-print(c)
+content = generate_checklist(client, t)
+with open('backend/prompt_result.txt', 'w', encoding='utf-8') as prompt_file:
+        prompt_file.write(content)
