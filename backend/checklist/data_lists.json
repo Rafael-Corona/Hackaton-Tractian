@@ -1,0 +1,112 @@
+data_lists = [
+    {
+        "titulo": "Ferramentas de Corte",
+        "itens": [
+            {"categoria": "Ferramentas de Corte", "descricao": "Serra Circular", "codigo": "MAT001"},
+            {"categoria": "Ferramentas de Corte", "descricao": "Disco de Corte", "codigo": "MAT002"},
+            {"categoria": "Ferramentas de Corte", "descricao": "Serra de Fita", "codigo": "MAT003"},
+            {"categoria": "Ferramentas de Corte", "descricao": "Disco de Desbaste", "codigo": "MAT004"},
+            {"categoria": "Ferramentas de Corte", "descricao": "Broca de Aço Rápido 10mm", "codigo": "MAT005"},
+            {"categoria": "Ferramentas de Corte", "descricao": "Conjunto de Fresas para Usinagem", "codigo": "MAT006"},
+            {"categoria": "Ferramentas de Corte", "descricao": "Lâmina de Serra Sabre", "codigo": "MAT007"},
+            {"categoria": "Ferramentas de Corte", "descricao": "Lixadeira Angular", "codigo": "EQP001"}
+        ]
+    },
+    {
+        "titulo": "Ferramentas de Medição",
+        "itens": [
+            {"categoria": "Ferramentas de Medição", "descricao": "Paquímetro Digital", "codigo": "MAT101"},
+            {"categoria": "Ferramentas de Medição", "descricao": "Micrômetro", "codigo": "MAT102"},
+            {"categoria": "Ferramentas de Medição", "descricao": "Relógio Comparador", "codigo": "MAT103"},
+            {"categoria": "Ferramentas de Medição", "descricao": "Trena de Aço 5m", "codigo": "MAT104"},
+            {"categoria": "Ferramentas de Medição", "descricao": "Nível de Bolha", "codigo": "MAT105"},
+            {"categoria": "Ferramentas de Medição", "descricao": "Goniômetro Digital", "codigo": "MAT106"},
+            {"categoria": "Ferramentas de Medição", "descricao": "Manômetro para Pressão", "codigo": "MAT107"},
+            {"categoria": "Ferramentas de Medição", "descricao": "Calibrador de Roscas", "codigo": "MAT108"}
+        ]
+    },
+    {
+        "titulo": "Equipamentos de Solda",
+        "itens": [
+            {"categoria": "Equipamentos de Solda", "descricao": "Máquina de Solda MIG", "codigo": "EQP201"},
+            {"categoria": "Equipamentos de Solda", "descricao": "Eletrodo de Solda Inox", "codigo": "MAT201"},
+            {"categoria": "Equipamentos de Solda", "descricao": "Máscara de Solda Automática", "codigo": "MAT202"},
+            {"categoria": "Equipamentos de Solda", "descricao": "Maçarico de Corte Oxiacetilênico", "codigo": "EQP202"},
+            {"categoria": "Equipamentos de Solda", "descricao": "Tocha de Solda TIG", "codigo": "MAT203"},
+            {"categoria": "Equipamentos de Solda", "descricao": "Fio de Solda MIG ER70S-6", "codigo": "MAT204"},
+            {"categoria": "Equipamentos de Solda", "descricao": "Regulador de Pressão para Gás", "codigo": "MAT205"},
+            {"categoria": "Equipamentos de Solda", "descricao": "Tubo de Gás Acetileno", "codigo": "MAT206"}
+        ]
+    },
+    {
+        "titulo": "Lubrificação e Manutenção",
+        "itens": [
+            {"categoria": "Lubrificação e Manutenção", "descricao": "Graxa Industrial", "codigo": "MAT301"},
+            {"categoria": "Lubrificação e Manutenção", "descricao": "Óleo Lubrificante 10W30", "codigo": "MAT302"},
+            {"categoria": "Lubrificação e Manutenção", "descricao": "Bomba de Graxa Pneumática", "codigo": "EQP301"},
+            {"categoria": "Lubrificação e Manutenção", "descricao": "Limpa Contatos Elétricos", "codigo": "MAT303"},
+            {"categoria": "Lubrificação e Manutenção", "descricao": "Spray Desengripante", "codigo": "MAT304"},
+            {"categoria": "Lubrificação e Manutenção", "descricao": "Veda Rosca em Fita", "codigo": "MAT305"}
+        ]
+    },
+    {
+        "titulo": "Equipamentos de Segurança",
+        "itens": [
+            {"categoria": "Equipamentos de Segurança", "descricao": "Capacete de Segurança com Aba", "codigo": "MAT401"},
+            {"categoria": "Equipamentos de Segurança", "descricao": "Luvas Térmicas de Alta Resistência", "codigo": "MAT402"},
+            {"categoria": "Equipamentos de Segurança", "descricao": "Óculos de Proteção Antirrespingos", "codigo": "MAT403"},
+            {"categoria": "Equipamentos de Segurança", "descricao": "Protetor Auricular Tipo Plug", "codigo": "MAT404"},
+            {"categoria": "Equipamentos de Segurança", "descricao": "Corrente de Elevação de 10m", "codigo": "MAT501"},
+            {"categoria": "Equipamentos de Segurança", "descricao": "Gancho Giratório com Trava de Segurança", "codigo": "MAT502"},
+            {"categoria": "Equipamentos de Segurança", "descricao": "Cinta de Elevação com Olhal", "codigo": "MAT503"},
+            {"categoria": "Equipamentos de Segurança", "descricao": "Carrinho de Transporte de Bobinas", "codigo": "EQP502"},
+            {"categoria": "Equipamentos de Segurança", "descricao": "Macaco Hidráulico 10 Toneladas", "codigo": "EQP503"}
+        ]
+    },
+    {
+        "titulo": "Componentes Mecânicos",
+        "itens": [
+            {"categoria": "Componentes Mecânicos", "descricao": "Rolamento Esférico de Precisão", "codigo": "MAT601"},
+            {"categoria": "Componentes Mecânicos", "descricao": "Parafuso de Alta Resistência M12", "codigo": "MAT602"},
+            {"categoria": "Componentes Mecânicos", "descricao": "Correia de Transmissão Industrial", "codigo": "MAT603"},
+            {"categoria": "Componentes Mecânicos", "descricao": "Junta de Vedação em Borracha", "codigo": "MAT604"},
+            {"categoria": "Componentes Mecânicos", "descricao": "Engrenagem Cilíndrica de Aço", "codigo": "MAT605"},
+            {"categoria": "Componentes Mecânicos", "descricao": "Bucha de Bronze Autolubrificante", "codigo": "MAT606"},
+            {"categoria": "Componentes Mecânicos", "descricao": "Eixo de Transmissão", "codigo": "MAT607"},
+            {"categoria": "Componentes Mecânicos", "descricao": "Polia de Alumínio", "codigo": "MAT608"}
+        ]
+    },
+    {
+        "titulo": "Equipamentos Hidráulicos",
+        "itens": [
+            {"categoria": "Equipamentos Hidráulicos", "descricao": "Válvula Solenoide Hidráulica", "codigo": "EQP601"},
+            {"categoria": "Equipamentos Hidráulicos", "descricao": "Bomba Hidráulica de Pistão", "codigo": "EQP602"},
+            {"categoria": "Equipamentos Hidráulicos", "descricao": "Mangueira Hidráulica de Alta Pressão", "codigo": "MAT701"},
+            {"categoria": "Equipamentos Hidráulicos", "descricao": "Conector Hidráulico Rápido", "codigo": "MAT702"}
+        ]
+    },
+    {
+        "titulo": "Equipamentos Elétricos",
+        "itens": [
+            {"categoria": "Equipamentos Elétricos", "descricao": "Motor Elétrico Trifásico 5HP", "codigo": "EQP701"},
+            {"categoria": "Equipamentos Elétricos", "descricao": "Cabo Elétrico 10mm²", "codigo": "MAT801"},
+            {"categoria": "Equipamentos Elétricos", "descricao": "Disjuntor de 100A", "codigo": "MAT802"},
+            {"categoria": "Equipamentos Elétricos", "descricao": "Quadro de Comando Elétrico com Inversor de Frequência", "codigo": "EQP702"},
+            {"categoria": "Equipamentos Elétricos", "descricao": "Chave Seccionadora", "codigo": "MAT803"},
+            {"categoria": "Equipamentos Elétricos", "descricao": "Fusível NH 100A", "codigo": "MAT804"},
+            {"categoria": "Equipamentos Elétricos", "descricao": "Tomada Industrial 380V", "codigo": "MAT805"}
+        ]
+    },
+    {
+        "titulo": "Ferramentas Manuais",
+        "itens": [
+            {"categoria": "Ferramentas Manuais", "descricao": "Chave de Fenda Phillips 6mm", "codigo": "MAT901"},
+            {"categoria": "Ferramentas Manuais", "descricao": "Alicate de Corte", "codigo": "MAT902"},
+            {"categoria": "Ferramentas Manuais", "descricao": "Martelo de Borracha", "codigo": "MAT903"},
+            {"categoria": "Ferramentas Manuais", "descricao": "Torquímetro 40-200Nm", "codigo": "MAT904"},
+            {"categoria": "Ferramentas Manuais", "descricao": "Conjunto de Chaves Allen", "codigo": "MAT905"},
+            {"categoria": "Ferramentas Manuais", "descricao": "Chave Estrela 12mm", "codigo": "MAT906"},
+            {"categoria": "Ferramentas Manuais", "descricao": "Serra Manual", "codigo": "MAT907"}
+        ]
+    }
+]

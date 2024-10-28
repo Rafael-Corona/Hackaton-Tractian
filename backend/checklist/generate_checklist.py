@@ -1,7 +1,30 @@
+import json
 from openai import OpenAI
 
+def load_json_data(filepath):
+    with open(filepath, 'r', encoding='utf-8') as json_file:
+        return json.load(json_file)
+
 def generate_checklist(client: OpenAI, transcribed_text: str) -> str:
+    data_lists = load_json_data('data_lists.json')
     # Define the prompt in Portuguese to ask for a checklist based on the transcribed text
+    prompt = f"A partir do contexto e do texto transcrito a seguir, gere uma lista de verificação para o técnico de manutenção com as ações necessárias.\n\n"
+    prompt += f"Texto transcrito:\n{transcribed_text}\n\n"
+    prompt += f"""
+    Por favor, organize as ações em uma checklist com pontos claros e específicos. Gere o texto em markdown.
+    Além disso, gere uma checklist com os equipamentos necessarios para cada etapa.
+    Use a seguinte lista de equipamentos com os seus respectivos codigos
+    """
+    if data_lists:
+        for lista in data_lists:
+            prompt += f"{lista['titulo']}:\n"
+            prompt += "| Categoria                  | Descrição                          | Código |\n"
+            prompt += "|----------------------------|------------------------------------|--------|\n"
+            for item in lista['itens']:
+                prompt += f"| {item.get('categoria', '')} | {item.get('descricao', '')} | {item.get('codigo', '')} |\n"
+            prompt += "```\n\n"
+    prompt += "Por favor, organize as ações em uma checklist com pontos claros e específicos. Gere o texto em markdown.\n"
+    '''
     prompt = f"""
     A partir do texto a seguir, gere uma lista de verificação para o técnico de manutenção com as ações necessárias:
     
@@ -87,7 +110,7 @@ def generate_checklist(client: OpenAI, transcribed_text: str) -> str:
 |                            | Serra Manual                                     | MAT907     |
     ```
     """
-
+    '''
     # Call ChatGPT to generate the checklist
     completion = client.chat.completions.create(
     model="gpt-4o",
